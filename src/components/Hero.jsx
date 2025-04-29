@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
+import TrustedPartners from './TrustedPartners';
 
 export default function Hero() {
   const [text, setText] = useState('');
@@ -113,26 +114,7 @@ export default function Hero() {
         </div>
 
         {/* Trusted By Section */}
-        <div className="mt-16 md:mt-24">
-          <p className="text-center text-gray-500 mb-6">Trusted by leading organizations</p>
-          <div className="overflow-hidden px-4">
-            <motion.div
-              animate={{ x: ['0%', '-100%'] }}
-              transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
-              className="flex items-center gap-12 md:gap-16"
-            >
-              {[...Array(2)].map((_, i) => (
-                <div key={i} className="flex items-center gap-12 md:gap-16">
-                  {['partner1', 'partner2', 'partner3', 'partner4', 'partner5'].map((partner, idx) => (
-                    <div key={idx} className="h-12 w-32 bg-gray-200 rounded-lg flex items-center justify-center">
-                      <span className="text-gray-500 font-medium">Partner {idx + 1}</span>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
+        <TrustedPartners/>
       </section>
 
       {/* Features Section */}
