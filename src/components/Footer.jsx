@@ -26,7 +26,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-white transition">Home</Link></li>
               <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-              <li><Link href="/services" className="hover:text-white transition">Services</Link></li>
+              <li><Link href="/overview" className="hover:text-white transition">Services</Link></li>
               <li><Link href="/claims" className="hover:text-white transition">Claims</Link></li>
               <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
             </ul>
@@ -35,11 +35,11 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/life-insurance" className="hover:text-white transition">Life Insurance</Link></li>
-              <li><Link href="/health-insurance" className="hover:text-white transition">Health Insurance</Link></li>
-              <li><Link href="/trauma-insurance" className="hover:text-white transition">Trauma Insurance</Link></li>
-              <li><Link href="/income-protection" className="hover:text-white transition">Income Protection</Link></li>
-              <li><Link href="/retirement-plans" className="hover:text-white transition">Retirement Plans</Link></li>
+              <li><Link href="/life" className="hover:text-white transition">Life Insurance</Link></li>
+              <li><Link href="/health" className="hover:text-white transition">Health Insurance</Link></li>
+              <li><Link href="/trauma" className="hover:text-white transition">Trauma Insurance</Link></li>
+              <li><Link href="/income" className="hover:text-white transition">Income Protection</Link></li>
+              
             </ul>
           </div>
 
@@ -47,9 +47,9 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li><Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-white transition">Terms of Service</Link></li>
+              <li><Link href="/terms&conditions" className="hover:text-white transition">Terms of Service</Link></li>
               <li><Link href="/disclaimer" className="hover:text-white transition">Disclaimer</Link></li>
-              <li><Link href="/complaints" className="hover:text-white transition">Complaints</Link></li>
+              <li><Link href="/complaint" className="hover:text-white transition">Complaints</Link></li>
               <li><Link href="/faq" className="hover:text-white transition">FAQs</Link></li>
             </ul>
           </div>

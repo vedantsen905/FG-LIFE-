@@ -7,6 +7,7 @@ import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
 import TrustedPartners from './TrustedPartners';
+import ContactSection from './Contact';
 
 export default function Hero() {
   const [text, setText] = useState('');
@@ -87,7 +88,7 @@ export default function Hero() {
                   Discover More
                 </button>
               </Link>
-              <Link href="/learn-more" className="flex items-center text-teal-600 font-semibold group">
+              <Link href="/overview" className="flex items-center text-teal-600 font-semibold group">
                 Learn more
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -202,7 +203,7 @@ export default function Hero() {
               ))}
             </div>
             
-            <Link href="/life-insurance" className="inline-flex items-center text-teal-600 font-semibold group">
+            <Link href="/life" className="inline-flex items-center text-teal-600 font-semibold group">
               Explore Life Cover
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -350,11 +351,7 @@ export default function Hero() {
               Get personalized insurance advice from our experts. We'll help you find the right coverage for your unique situation.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/get-quote">
-                <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-gray-100 transition-colors">
-                  Get a Free Quote
-                </button>
-              </Link>
+               
               <Link href="/contact">
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition-colors">
                   Speak to an Advisor
@@ -366,127 +363,7 @@ export default function Hero() {
       </section>
 
       {/* Contact Section */}
-      <section className="w-full py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left - Contact Info */}
-          <div className="space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Get in Touch</h2>
-            <p className="text-gray-600 text-lg">
-              Have questions or need assistance? Our team is here to help you navigate your insurance options.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-teal-100 p-3 rounded-full text-teal-600">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Call Us</h4>
-                  <p className="text-gray-600">0800 344 700</p>
-                  <p className="text-gray-500 text-sm">Monday to Friday, 8:30am - 5:00pm</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-100 p-3 rounded-full text-blue-600">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Email Us</h4>
-                  <p className="text-gray-600">info@fglife.co.nz</p>
-                  <p className="text-gray-500 text-sm">We typically respond within 12 hours</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-purple-100 p-3 rounded-full text-purple-600">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Visit Us</h4>
-                  <p className="text-gray-600">430 Ulster Street, Beerescourt, Hamilton 3200, New Zealand</p>
-                  <p className="text-gray-500 text-sm">By appointment only</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.6724603907956!2d175.2666254752794!3d-37.770297571981554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d19164c4450e1%3A0xbbe999f60ef74949!2s430%20Ulster%20Street%2C%20Beerescourt%2C%20Hamilton%203200%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1714306241083!5m2!1sen!2snz"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen={false}
-                loading="lazy"
-              ></iframe>
-            </div>
-          </div>
-
-          {/* Right - Contact Form */}
-          <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                  <input 
-                    type="text" 
-                    id="firstName" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
-                    placeholder="Your first name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                  <input 
-                    type="text" 
-                    id="lastName" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
-                    placeholder="Your last name"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
-                  placeholder="+64 00 000 0000"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea 
-                  id="message" 
-                  rows="4" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
-                  placeholder="How can we help you?"
-                ></textarea>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
+      <ContactSection/>
 
 {/* <Footer/> */}
 
